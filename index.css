@@ -1,0 +1,114 @@
+body {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  background-image: url(img-3.jpg);
+  background-size: cover;
+
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  margin: 0px;
+}
+section {
+  height: 97vh;
+  /* border: solid 2px green; */
+  display: flex;
+}
+.entrada {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 6px;
+  justify-content: space-between;
+  /* border: solid 2px red; */
+  height: 100%;
+  padding: 6px;
+}
+.entrada h1 {
+  font-size: 100px;
+  color: #fe9668;
+  margin: 0px;
+  text-shadow: 3px 3px 5px black;
+  animation-duration: 1.5s;
+  animation-name: slidein;
+}
+
+.p {
+  color: #fe9668;
+  font-size: 20px;
+}
+
+img {
+  max-width: 200px;
+
+  max-height: 190px;
+}
+.pregunta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pregunta h2 {
+  color: #fe9668;
+  margin-left: 6px;
+  font-size: 30px;
+  text-shadow: 3px 3px 5px black;
+  animation-duration: 1.5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 80%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 5%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p {
+    width: 300%;
+  }
+  .images-2 {
+    display: block;
+  }
+  .pregunta {
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 60vh;
+  }
+  img {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media screen and (max-width: 425px) {
+  body {
+    background-repeat: repeat-y;
+    background-size: auto;
+  }
+  section {
+    height: 100%;
+  }
+  .pregunta {
+    /* display: block; */
+    height: 10%;
+  }
+  img {
+    width: 130px;
+    height: 130px;
+  }
+  #img5 {
+    display: none;
+  }
+  .images-2 {
+    margin-top: 20px;
+  }
+  .entrada {
+    height: 100vh;
+    margin-right: 10px;
+  }
+}
